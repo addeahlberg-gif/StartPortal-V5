@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "startportal-v5",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-09-18",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "startportal-v5",
+      "database_id": "83aa603c-40d3-42d3-a2ad-62ca456d1174",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
